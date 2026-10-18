@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1424" />
+  <title>WeatherNow | Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="WeatherNow home">
+        <span class="brand-icon" aria-hidden="true">☀</span>
+        <span>Weather<span class="brand-accent">Now</span></span>
+      </a>
+      <button class="unit-toggle" id="unitToggle" type="button" aria-label="Switch temperature unit">
+        <span class="unit-option active" data-unit="C">°C</span>
+        <span class="unit-divider">|</span>
+        <span class="unit-option " data-unit="F">°F</span>
+      </button>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY WEATHER</p>
+      <h1>Forecast at a glance.</h1>
+      <p class="subtitle">Find the weather wherever your day takes you.</p>
+    </section>
+
+    <form class="search-form" id="searchForm">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <label class="visually-hidden" for="cityInput">City name</label>
+      <input id="cityInput" name="city" type="text" placeholder="Search for a city..." autocomplete="off" />
+      <button type="submit">Search <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="status-message" id="statusMessage" role="status" aria-live="polite">
+      Preview mode: showing sample weather. Search a city to preview the interface.
+    </p>
+
+    <section class="weather-card" aria-labelledby="cityName">
+      <div class="weather-main">
+        <div class="weather-location">
+          <span class="location-pin" aria-hidden="true">⌖</span>
+          <div>
+            <h2 id="cityName">Pune, India</h2>
+            <p id="currentDate">Monday, 19 October</p>
+          </div>
+        </div>
+        <div class="current-weather">
+          <div class="temperature-wrap">
+            <p class="temperature" id="temperature">28<span>°C</span></p>
+            <p class="condition" id="condition">Partly cloudy</p>
+            <p class="feels-like" id="feelsLike">Feels like 30°C</p>
+          </div>
+          <div class="weather-art" id="weatherArt" aria-hidden="true">
+            <span class="sun"></span><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span>
+          </div>
+        </div>
+        <div class="high-low">
+          <span>↑ High <strong id="highTemp">31°</strong></span>
+          <span>↓ Low <strong id="lowTemp">23°</strong></span>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <div class="detail-heading"><span class="detail-icon humidity-icon" aria-hidden="true">≈</span><span>Humidity</span></div>
+          <p class="detail-value" id="humidity">65<span>%</span></p>
+          <p class="detail-caption">Moisture in the air</p>
+        </article>
+        <article class="detail-card">
+          <div class="detail-heading"><span class="detail-icon wind-icon" aria-hidden="true">〰</span><span>Wind speed</span></div>
+          <p class="detail-value" id="wind">12<span> km/h</span></p>
+          <p class="detail-caption">Gentle breeze</p>
+        </article>
+        <article class="detail-card">
+          <div class="detail-heading"><span class="detail-icon visibility-icon" aria-hidden="true">◎</span><span>Visibility</span></div>
+          <p class="detail-value" id="visibility">10<span> km</span></p>
+          <p class="detail-caption">Distance you can see</p>
+        </article>
+        <article class="detail-card">
+          <div class="detail-heading"><span class="detail-icon pressure-icon" aria-hidden="true">◉</span><span>Pressure</span></div>
+          <p class="detail-value" id="pressure">1013<span> hPa</span></p>
+          <p class="detail-caption">Atmospheric pressure</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="forecast-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMING UP</p>
+          <h2>5-day forecast</h2>
+        </div>
+        <span class="coming-soon">Coming soon</span>
+      </div>
+      <div class="forecast-placeholder">
+        <span aria-hidden="true">☁</span>
+        <p>Connect a forecast API to see the weather for the next five days.</p>
+      </div>
+    </section>
+
+    <footer>Made for your everyday forecast <span aria-hidden="true">✦</span></footer>
+  </main>
+</body>
+</html>

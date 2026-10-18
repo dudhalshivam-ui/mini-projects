@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            /* border: solid black 5px; */
+        }
+        .box{
+            border: solid black 4px;
+            width: 100px;
+            height: 100px;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #green{
+            background-color: green;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>color changer : select color </h1>
+
+    <div class="container">
+        <div  class="box" id="yellow"></div>
+        <div class="box" id="red"></div>
+        <div class="box" id ="pink"></div>
+        <div class="box" id="green"></div>
+
+    </div>
+
+    <script>
+        const body = document.querySelector("body")
+
+        const buttons = document.querySelectorAll('.box')
+
+        buttons.forEach(function(btn){
+            // console.log(btn.innerHTML)
+            console.log(btn)
+            console.log(btn.target);
+
+           btn.addEventListener("click",function(btn){
+            if(btn.target.id==="yellow"){
+                body.style.backgroundColor=btn.target.id;
+            }
+            if(btn.target.id==="red"){
+                body.style.backgroundColor=btn.target.id;
+            }
+            if(btn.target.id==="pink"){
+                body.style.backgroundColor=btn.target.id;
+            }
+            if(btn.target.id==="green"){
+                body.style.backgroundColor=btn.target.id;
+            }
+            
+           })
+            
+
+            
+        })
+
+    </script>
+    
+</body>
+</html>
