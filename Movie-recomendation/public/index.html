@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse | Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1 class="logo">Movie<span>Verse</span></h1>
+        <p>Discover your next favourite movie</p>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Find Your Next Movie</h2>
+            <p>Search movies, explore ratings, and discover stories.</p>
+
+            <form id="searchForm" class="search-form">
+                <input
+                    type="text"
+                    id="movieInput"
+                    placeholder="Search for a movie..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="movies-section">
+            <h2 id="sectionTitle">Popular Movies</h2>
+
+            <div id="movieResults" class="movie-grid">
+                <!-- Movie cards will be added using JavaScript -->
+            </div>
+
+            <p id="message" class="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>MovieVerse — Built with JavaScript and TMDB</p>
+        <p class="disclaimer">
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
